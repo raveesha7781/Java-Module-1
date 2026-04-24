@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Route Finder</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <style>
+        #map {
+            height: 500px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Find Route to Karaportti 2</h1>
+
+<form id="routeForm">
+    <input id="address" type="text" placeholder="Enter your address" required>
+    <button type="submit">Find Route</button>
+</form>
+
+<p id="times"></p>
+
+<div id="map"></div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
