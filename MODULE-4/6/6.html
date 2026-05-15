@@ -1,20 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Search Joke</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Assignment 6 – Chuck Norris Search</title>
+  <link rel="stylesheet" href="assignment6.css">
 </head>
 <body>
 
-<h1>Search Chuck Norris Jokes</h1>
+  <h1>Chuck Norris Jokes</h1>
 
-<form id="searchForm">
-    <input id="query" type="text">
-    <button type="submit">Search</button>
-</form>
+  <form id="jokeForm">
+    <input id="query" type="text" placeholder="Enter a search term">
+    <input type="submit" value="Search">
+  </form>
 
-<div id="results"></div>
+  <!-- Results will be appended here -->
+  <div id="results"></div>
 
-<script src="script.js"></script>
-
+  <script src="assignment6.js"></script>
 </body>
 </html>

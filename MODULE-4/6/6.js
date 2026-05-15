@@ -1,28 +1,27 @@
-const form = document.getElementById("searchForm");
-const resultsDiv = document.getElementById("results");
+const jokeForm = document.getElementById('jokeForm');
+const results = document.getElementById('results');
 
-form.addEventListener("submit", function(e) {
-    e.preventDefault();
+jokeForm.addEventListener('submit', async (event) => {
+  event.preventDefault();
 
-    const query = document.getElementById("query").value;
+  const value = document.getElementById('query').value;
 
-    fetch(`https://api.chucknorris.io/jokes/search?query=${query}`)
-        .then(res => res.json())
-        .then(data => {
+  const response = await fetch(`https://api.chucknorris.io/jokes/search?query=${value}`);
+  const data = await response.json();
 
-            resultsDiv.innerHTML = "";
+  console.log(data);
 
-            data.result.forEach(joke => {
+  // Clear old results
+  results.innerHTML = '';
 
-                const article = document.createElement("article");
+  // Print each joke as: <article><p>Joke here</p></article>
+  data.result.forEach((joke) => {
+    const article = document.createElement('article');
 
-                const p = document.createElement("p");
-                p.textContent = joke.value;
+    const p = document.createElement('p');
+    p.textContent = joke.value;
 
-                article.appendChild(p);
-                resultsDiv.appendChild(article);
-            });
-
-        })
-        .catch(err => console.error(err));
+    article.appendChild(p);
+    results.appendChild(article);
+  });
 });

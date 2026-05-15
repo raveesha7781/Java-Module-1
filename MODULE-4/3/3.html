@@ -1,20 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>TV Search</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Assignment 3 – Show Results on Page</title>
+  <link rel="stylesheet" href="assignment3.css">
 </head>
 <body>
 
-<h1>Search TV Shows</h1>
+  <h1>TV Series Search</h1>
 
-<form id="searchForm">
-    <input id="query" type="text">
-    <button type="submit">Search</button>
-</form>
+  <form id="searchForm">
+    <input id="query" name="q" type="text" placeholder="Enter a TV show name">
+    <input type="submit" value="Search">
+  </form>
 
-<div id="results"></div>
+  <!-- Results will be appended here -->
+  <div id="results"></div>
 
-<script src="script.js"></script>
-
+  <script src="assignment3.js"></script>
 </body>
 </html>
+ 

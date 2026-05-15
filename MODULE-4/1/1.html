@@ -1,16 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>TV Search</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Assignment 1 – TV Series Search Form</title>
 </head>
 <body>
 
-<h1>Search TV Shows</h1>
+  <h1>TV Series Search</h1>
 
-<form action="https://api.tvmaze.com/search/shows">
-    <input id="query" name="q" type="text" placeholder="Enter show name">
+  <!-- Form action directly hits the TVMaze API.
+       Submitting navigates to the JSON result page. -->
+  <form action="https://api.tvmaze.com/search/shows">
+    <input id="query" name="q" type="text" placeholder="Enter a TV show name">
     <input type="submit" value="Search">
-</form>
+  </form>
 
 </body>
 </html>

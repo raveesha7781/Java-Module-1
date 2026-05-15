@@ -1,0 +1,61 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 16px;
+}
+
+form {
+  margin-bottom: 24px;
+}
+
+form input[type="text"] {
+  padding: 8px;
+  width: 260px;
+  font-size: 1rem;
+}
+
+form input[type="submit"] {
+  padding: 8px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+#results {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+article {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 12px;
+  background: #fafafa;
+}
+
+article h2 {
+  font-size: 1.1rem;
+  margin: 0 0 8px 0;
+}
+
+article img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 8px;
+}
+
+article a {
+  display: block;
+  font-size: 0.85rem;
+  color: #0055cc;
+  word-break: break-all;
+  margin-bottom: 8px;
+}
+
+article div {
+  font-size: 0.85rem;
+  color: #444;
+  line-height: 1.5;
+}

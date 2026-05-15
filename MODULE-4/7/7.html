@@ -1,32 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Route Finder</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Assignment 7 – Route to Karaportti 2</title>
 
-    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 
-    <style>
-        #map {
-            height: 500px;
-            margin-top: 20px;
-        }
-    </style>
+  <link rel="stylesheet" href="assignment7.css"/>
 </head>
 <body>
 
-<h1>Find Route to Karaportti 2</h1>
+  <header>
+    <h1> Route Planner</h1>
+    <p class="subtitle">Find your way to <strong>Karaportti 2, Espoo</strong></p>
+  </header>
 
-<form id="routeForm">
-    <input id="address" type="text" placeholder="Enter your address" required>
-    <button type="submit">Find Route</button>
-</form>
+  <main>
+    <!-- Search form -->
+    <section class="form-section">
+      <form id="routeForm">
+        <label for="addressInput">Your starting address</label>
+        <div class="input-row">
+          <input
+            id="addressInput"
+            type="text"
+            placeholder="e.g. Mannerheimintie 1, Helsinki"
+            required
+          />
+          <button type="submit">Get Route</button>
+        </div>
+      </form>
+    </section>
 
-<p id="times"></p>
+    <!-- Status / error messages -->
+    <p id="statusMsg" class="status"></p>
 
-<div id="map"></div>
+    <!-- Trip time info -->
+    <section id="tripInfo" class="trip-info hidden">
+      <div class="time-box">
+        <span class="time-label">🟢 Departure</span>
+        <span id="departureTime" class="time-value">--:--</span>
+      </div>
+      <div class="arrow">→</div>
+      <div class="time-box">
+        <span class="time-label"> Arrival</span>
+        <span id="arrivalTime" class="time-value">--:--</span>
+      </div>
+      <div class="duration-box">
+        <span id="durationText"></span>
+      </div>
+    </section>
 
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-<script src="script.js"></script>
+    <!-- Map -->
+    <div id="map"></div>
+  </main>
 
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <!-- Polyline decoder (Google encoded polyline → LatLng array) -->
+  <script src="assignment7-polyline.js"></script>
+
+  <!-- App logic -->
+  <script src="assignment7.js"></script>
 </body>
 </html>
